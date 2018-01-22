@@ -204,6 +204,16 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Designs\BootstrapOriginal\bootstrap.css" />
+    <Content Include="Designs\BootstrapOriginal\bootstrap.min.css" />
+    <Content Include="Designs\Lux 4.0\bootstrap.css" />
+    <Content Include="Designs\Lux 4.0\bootstrap.min.css" />
+    <Content Include="Designs\Sandstone\bootstrap.css" />
+    <Content Include="Designs\Sandstone\bootstrap.min.css" />
+    <Content Include="Designs\Slate\bootstrap.css" />
+    <Content Include="Designs\Slate\bootstrap.min.css" />
+    <Content Include="Designs\Superhero\bootstrap.css" />
+    <Content Include="Designs\Superhero\bootstrap.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -213,6 +223,14 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Designs\Lux 4.0\_bootswatch.scss" />
+    <Content Include="Designs\Lux 4.0\_variables.scss" />
+    <Content Include="Designs\Slate\_bootswatch.scss" />
+    <Content Include="Designs\Slate\_variables.scss" />
+    <Content Include="Designs\Superhero\_bootswatch.scss" />
+    <Content Include="Designs\Superhero\_variables.scss" />
+    <Content Include="Designs\Sandstone\_bootswatch.scss" />
+    <Content Include="Designs\Sandstone\_variables.scss" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
