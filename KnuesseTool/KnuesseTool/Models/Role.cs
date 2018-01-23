@@ -5,9 +5,10 @@ namespace KnuesseTool.Models
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
+    using Microsoft.AspNet.Identity.EntityFramework;
 
     [Table("Role")]
-    public partial class Role
+    public partial class Role : IdentityRole
     {
         [Key]
         [Column(Order = 0)]
