@@ -5,6 +5,9 @@ namespace KnuesseTool.Models
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
+    using System.Security.Claims;
+    using System.Threading.Tasks;
+    using Microsoft.AspNet.Identity;
     using Microsoft.AspNet.Identity.EntityFramework;
 
     [Table("User")]
@@ -20,7 +23,13 @@ namespace KnuesseTool.Models
             Tasks = new HashSet<Task>();
         }
 
-        public int Id { get; set; }
+        public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<User> manager)
+        {
+            // Beachten Sie, dass der "authenticationType" mit dem in "CookieAuthenticationOptions.AuthenticationType" definierten Typ übereinstimmen muss.
+            var userIdentity = await manager.CreateIdentityAsync(this, DefaultAuthenticationTypes.ApplicationCookie);
+            // Benutzerdefinierte Benutzeransprüche hier hinzufügen
+            return userIdentity;
+        }
 
         [StringLength(256)]
         public string Name { get; set; }
@@ -29,14 +38,8 @@ namespace KnuesseTool.Models
         public string Prename { get; set; }
 
         [StringLength(256)]
-        public string Email { get; set; }
-
-        [StringLength(256)]
         public string MobilePhoneNumber { get; set; }
-
-        [StringLength(256)]
-        public string PhoneNumber { get; set; }
-
+ 
         public DateTime? Birthdate { get; set; }
 
         [StringLength(256)]

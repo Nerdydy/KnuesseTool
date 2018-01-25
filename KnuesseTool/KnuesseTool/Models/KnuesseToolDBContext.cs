@@ -4,12 +4,18 @@ namespace KnuesseTool.Models
     using System.Data.Entity;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Linq;
+    using Microsoft.AspNet.Identity.EntityFramework;
 
-    public partial class KnuesseToolDBContext : DbContext
+    public partial class KnuesseToolDBContext : IdentityDbContext<User>
     {
         public KnuesseToolDBContext()
             : base("name=KnuesseToolDBContext")
         {
+        }
+
+        public static KnuesseToolDBContext Create()
+        {
+            return new KnuesseToolDBContext();
         }
 
         public virtual DbSet<AmmoSigned> AmmoSigneds { get; set; }
